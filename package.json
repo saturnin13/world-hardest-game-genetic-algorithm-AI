@@ -1,0 +1,8 @@
+{
+  "name": "world-hardest-game-genetic-algorithm-AI",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:saturnin13/world-hardest-game-genetic-algorithm-AI.git",
+  "author": "Saturnin Pugnet",
+  "license": "MIT"
+}
