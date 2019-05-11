@@ -1,7 +1,7 @@
 var config = {
     type: Phaser.AUTO,
-    width: 800,
-    height: 600,
+    width: 1100,
+    height: 500,
     physics: {
         default: 'arcade',
         arcade: {
@@ -16,15 +16,3 @@ var config = {
 };
 
 var game = new Phaser.Game(config);
-
-function preload() {
-
-}
-
-function create() {
-
-}
-
-function update() {
-
-}
