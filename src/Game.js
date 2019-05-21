@@ -1,21 +1,27 @@
-class Game {
+class Game extends Phaser.Scene {
 
-    static preload() {
-        this.load.image('sky', 'assets/sky.png');
+    static __levelDrawer;
+
+    preload() {
+        this.load.image('horizontal_bar', 'assets/horizontal_bar.png');
+        this.load.image('vertical_bar', 'assets/vertical_bar.png');
+        this.load.image('blue_ball', 'assets/blue_ball.png');
+        this.load.image('player_square', 'assets/player_square.png');
+        this.load.image('empty_goal_square', 'assets/empty_goal_square.png');
     }
 
-    static create() {
-        // var currColor = new Phaser.Display.Color(220, 220, 220);
-        // var rect = (this.add.rectangle(330, 0, 1050, 500, currColor.color));
-        //
+    create(data) {
+        var currentLevel = data.level ? data.level: 1;
+        console.log("Current level is " + currentLevel);
+
         var levelLoader = new LevelLoader();
-        var level1 = levelLoader.loadLevel1();
+        var level = levelLoader.loadLevel(currentLevel);
 
-        var drawer = new Drawer();
-        drawer.levelDrawer(this, level1);
+        Game.__levelDrawer = new LevelDrawer(this, level, currentLevel);
+        Game.__levelDrawer.draw();
     }
 
-    static update() {
-
+    update() {
+        Game.__levelDrawer.setPlayerControl(this);
     }
 }

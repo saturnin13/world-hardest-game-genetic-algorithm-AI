@@ -20,4 +20,8 @@ class Tile {
             default:
         }
     }
+
+    getTileType() {
+        return this.tileType;
+    }
 }

@@ -1,0 +1,1 @@
+var EntityTypes = Object.freeze({"NONE": "N", "PLAYER": 'P', "UP_BALL": 'U', "DOWN_BALL": 'D', "LEFT_BALL": 'L', "RIGHT_BALL": 'R', "GOAL_ENTITY": "G"});
